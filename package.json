@@ -2,7 +2,7 @@
   "name": "ignoregit",
   "version": "1.0.1",
   "description": "",
-  "main": "dist/index.js",
+  "main": "index.js",
   "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
   "repository": {
