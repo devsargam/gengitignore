@@ -13,13 +13,17 @@
   },
   "scripts": {
     "build": "tsup src/index.ts --format cjs,esm --dts",
-    "lint": "tsc"
+    "lint": "tsc",
+    "test": "vitest run",
+    "dev": "vitest",
+    "ci": "pnpm run lint && pnpm run test && pnpm run build"
   },
   "keywords": [],
   "author": "devsargam<sargampoudel100@gmail.com>",
   "license": "MIT",
   "devDependencies": {
     "tsup": "^8.0.1",
-    "typescript": "^5.3.3"
+    "typescript": "^5.3.3",
+    "vitest": "^1.1.0"
   }
 }
