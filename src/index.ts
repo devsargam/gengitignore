@@ -1,1 +1,3 @@
-export * from './test';
+import { testFn } from './test';
+
+testFn();
