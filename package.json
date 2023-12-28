@@ -1,12 +1,12 @@
 {
   "name": "ignoregit",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "",
   "main": "index.js",
   "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
   "bin": {
-    "ignoregit": "./index.js"
+    "ignoregit": "./index.mjs"
   },
   "repository": {
     "url": "https://github.com/devsargam/gengitignore.git"
