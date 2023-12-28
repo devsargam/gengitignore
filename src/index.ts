@@ -1,21 +1,26 @@
 import prompts from 'prompts';
-import yargs from 'yargs';
 
 import { getAllFiles } from './get-languages';
 import { getContentFromFile } from './get-content';
 import { writeToFile } from './write-content';
+import minimist from 'minimist';
 
-prompts.override(yargs.argv);
+const argv = minimist<{
+  language?: string;
+}>(process.argv.slice(2), { string: ['_'] });
+
+prompts.override(argv);
 
 (async () => {
-  const { fileName } = await prompts({
+  const { language } = await prompts({
     type: 'autocomplete',
-    name: 'fileName',
+    name: 'language',
     message: 'What is your language?',
     choices: await getAllFiles(),
   });
 
-  const content = await getContentFromFile(fileName);
+  console.log(`${language} received as language`);
+  const content = await getContentFromFile(language);
 
   await writeToFile(content);
 })();
