@@ -21,4 +21,4 @@ jobs:
           cache: 'pnpm'
 
       - run: pnpm install --no-frozen-lockfile
-      - run: pnpm ci
+      - run: pnpm run ci
