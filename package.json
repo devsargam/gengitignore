@@ -5,7 +5,8 @@
   "main": "index.js",
   "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
-  "bin": "cli.js",
+  "files": ["dist"],
+  "bin": "cli.js", 
   "repository": {
     "url": "https://github.com/devsargam/gengitignore.git"
   },
