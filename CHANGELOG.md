@@ -1,5 +1,11 @@
 # ignoregit-dev
 
+## 0.0.4
+
+### Patch Changes
+
+- 4cce1fa: # Adds dist directory in the package
+
 ## 0.0.3
 
 ### Patch Changes
