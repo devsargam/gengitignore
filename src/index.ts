@@ -19,7 +19,7 @@ prompts.override(argv);
     choices: await getAllFiles(),
   });
 
-  console.log(`${language} received as language`);
+  console.log(`🧪 Generating .gitignore for ${language}`);
   const content = await getContentFromFile(language);
 
   await writeToFile(content);
