@@ -10,7 +10,7 @@ const run = (
   args: string[],
   options: SyncOptions = {},
 ): ExecaSyncReturnValue => {
-  return execaCommandSync(`node ${CLI_PATH} ${args.join(' ')}}`);
+  return execaCommandSync(`node ${CLI_PATH}/cli.js ${args.join(' ')}}`);
 };
 
 test('prompts for language name if not supplied', () => {
