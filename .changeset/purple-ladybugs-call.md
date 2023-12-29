@@ -1,5 +1,5 @@
 ---
-"ignoregit": patch
+'ignoregit-dev': patch
 ---
 
 initial commit
