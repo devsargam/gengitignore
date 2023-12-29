@@ -1,6 +1,6 @@
 {
-  "name": "ignoregit",
-  "version": "1.0.5",
+  "name": "ignoregit-dev",
+  "version": "0.0.0",
   "description": "",
   "main": "index.js",
   "module": "dist/index.mjs",
@@ -16,21 +16,21 @@
     "lint": "tsc",
     "test": "vitest run",
     "dev": "vitest",
-    "ci": "pnpm run lint && pnpm run build && pnpm run test"
+    "ci": "pnpm run lint && pnpm run build && pnpm run test",
+    "release": "pnpm run lint && pnpm run build && pnpm run test && changeset publish"
   },
   "keywords": [],
   "author": "devsargam<sargampoudel100@gmail.com>",
   "license": "MIT",
   "devDependencies": {
+    "@changesets/cli": "^2.27.1",
     "@types/minimist": "^1.2.5",
     "@types/prompts": "^2.4.9",
+    "execa": "^8.0.1",
     "minimist": "^1.2.8",
     "prompts": "^2.4.2",
     "tsup": "^8.0.1",
     "typescript": "^5.3.3",
     "vitest": "^1.1.0"
-  },
-  "dependencies": {
-    "execa": "^8.0.1"
   }
 }
