@@ -2,13 +2,11 @@
   "name": "ignoregit-dev",
   "version": "0.0.4",
   "description": "",
-  "main": "index.js",
+  "main": "dist/index.js",
   "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
-  "files": [
-    "dist"
-  ],
-  "bin": "cli.js",
+  "files": ["dist", "templates"],
+  "bin": "cli.js", 
   "repository": {
     "url": "https://github.com/devsargam/gengitignore.git"
   },
