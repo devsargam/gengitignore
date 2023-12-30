@@ -1,5 +1,13 @@
 # ignoregit-dev
 
+## 1.0.0
+
+### Major Changes
+
+- ceacae1: - Generates `.gitignore` for more than 40 languages | frameworks
+  - Ability to choose language
+  - File can be generated in the required directory
+
 ## 0.0.5
 
 ### Patch Changes
