@@ -1,5 +1,11 @@
 # ignoregit-dev
 
+## 1.1.0
+
+### Minor Changes
+
+- f6bac74: gettings things to work
+
 ## 1.0.0
 
 ### Major Changes
