@@ -18,8 +18,7 @@ const init = async () => {
   const argTargetDir = formatTargetDir(argv._[0]);
   let targetDir = argTargetDir || defaultDir;
 
-  const getProjectName = () =>
-    targetDir === '.' ? path.basename(path.resolve()) : targetDir;
+  const getProjectName = () => (targetDir === '.' ? '.' : targetDir);
 
   const { language } = await prompts({
     type: 'autocomplete',
@@ -32,6 +31,7 @@ const init = async () => {
   const content = await getContentFromFile(language);
 
   await writeToFile(content, getProjectName());
+  console.log(`🧪 Generated .gitignore for ${language}`);
 };
 
 function formatTargetDir(targetDir: string | undefined) {
