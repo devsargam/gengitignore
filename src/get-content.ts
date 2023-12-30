@@ -3,6 +3,8 @@ import path from 'path';
 
 export const getContentFromFile = async (fileName: string) => {
   const filePath = path.join(__dirname, `../templates/${fileName}.gitignore`);
+  console.log(process.cwd());
+  console.log(filePath);
 
   try {
     const data = await fs.readFile(filePath, 'utf-8');

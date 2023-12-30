@@ -1,9 +1,10 @@
 import prompts from 'prompts';
+import path from 'path';
+import minimist from 'minimist';
 
 import { getAllFiles } from './get-languages';
 import { getContentFromFile } from './get-content';
 import { writeToFile } from './write-content';
-import minimist from 'minimist';
 
 const argv = minimist<{
   language?: string;
@@ -11,7 +12,15 @@ const argv = minimist<{
 
 prompts.override(argv);
 
-(async () => {
+const defaultDir = '.';
+
+const init = async () => {
+  const argTargetDir = formatTargetDir(argv._[0]);
+  let targetDir = argTargetDir || defaultDir;
+
+  const getProjectName = () =>
+    targetDir === '.' ? path.basename(path.resolve()) : targetDir;
+
   const { language } = await prompts({
     type: 'autocomplete',
     name: 'language',
@@ -22,5 +31,14 @@ prompts.override(argv);
   console.log(`🧪 Generating .gitignore for ${language}`);
   const content = await getContentFromFile(language);
 
-  await writeToFile(content);
-})();
+  await writeToFile(content, getProjectName());
+};
+
+function formatTargetDir(targetDir: string | undefined) {
+  return targetDir?.trim().replace(/\/+$/g, '');
+}
+
+init().catch((e: Error) => {
+  console.error('⚠️  Some error occured');
+  console.error('‼️  ' + e.message);
+});
