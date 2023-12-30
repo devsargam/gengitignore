@@ -1,6 +1,6 @@
 {
   "name": "ignoregit",
-  "version": "0.0.5",
+  "version": "1.0.0",
   "description": "",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
@@ -21,7 +21,12 @@
     "ci": "pnpm run lint && pnpm run build && pnpm run test",
     "release": "pnpm run lint && pnpm run build && pnpm run test && changeset publish"
   },
-  "keywords": ["cli", "git", "automation", "gitignore"],
+  "keywords": [
+    "cli",
+    "git",
+    "automation",
+    "gitignore"
+  ],
   "author": "devsargam<sargampoudel100@gmail.com>",
   "license": "MIT",
   "devDependencies": {
