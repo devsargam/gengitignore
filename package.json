@@ -1,5 +1,5 @@
 {
-  "name": "ignoregit-dev",
+  "name": "ignoregit",
   "version": "0.0.5",
   "description": "",
   "main": "dist/index.js",
@@ -21,7 +21,7 @@
     "ci": "pnpm run lint && pnpm run build && pnpm run test",
     "release": "pnpm run lint && pnpm run build && pnpm run test && changeset publish"
   },
-  "keywords": [],
+  "keywords": ["cli", "git", "automation", "gitignore"],
   "author": "devsargam<sargampoudel100@gmail.com>",
   "license": "MIT",
   "devDependencies": {
